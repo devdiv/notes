@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ruby 异常 | School</title>
+    <meta name="description" content="测试、开发、读书、分享">
+    <link rel="icon" href="/school/favicon.ico">
+    
+    <link rel="preload" href="/school/assets/css/0.styles.4be495fb.css" as="style"><link rel="preload" href="/school/assets/js/app.5919148e.js" as="script"><link rel="preload" href="/school/assets/js/99.b762e5e6.js" as="script"><link rel="prefetch" href="/school/assets/js/10.fade4ab6.js"><link rel="prefetch" href="/school/assets/js/100.f1e3a70d.js"><link rel="prefetch" href="/school/assets/js/101.d2d3543e.js"><link rel="prefetch" href="/school/assets/js/102.f8f6d632.js"><link rel="prefetch" href="/school/assets/js/103.90e3bf40.js"><link rel="prefetch" href="/school/assets/js/104.a13bdac5.js"><link rel="prefetch" href="/school/assets/js/105.ac842271.js"><link rel="prefetch" href="/school/assets/js/106.cc5d1227.js"><link rel="prefetch" href="/school/assets/js/107.a0ae32c4.js"><link rel="prefetch" href="/school/assets/js/108.1efce2f1.js"><link rel="prefetch" href="/school/assets/js/109.698e183c.js"><link rel="prefetch" href="/school/assets/js/11.2bd5c48e.js"><link rel="prefetch" href="/school/assets/js/110.1a5da71c.js"><link rel="prefetch" href="/school/assets/js/111.8a5819ae.js"><link rel="prefetch" href="/school/assets/js/112.650a583a.js"><link rel="prefetch" href="/school/assets/js/113.fa08142d.js"><link rel="prefetch" href="/school/assets/js/114.a23e36a1.js"><link rel="prefetch" href="/school/assets/js/115.432e59db.js"><link rel="prefetch" href="/school/assets/js/116.5af50ee5.js"><link rel="prefetch" href="/school/assets/js/117.326216e2.js"><link rel="prefetch" href="/school/assets/js/118.dcf4d7e5.js"><link rel="prefetch" href="/school/assets/js/119.d2995233.js"><link rel="prefetch" href="/school/assets/js/12.e9311be5.js"><link rel="prefetch" href="/school/assets/js/120.391137a1.js"><link rel="prefetch" href="/school/assets/js/121.4436956a.js"><link rel="prefetch" href="/school/assets/js/122.f74e4590.js"><link rel="prefetch" href="/school/assets/js/123.3d8fa706.js"><link rel="prefetch" href="/school/assets/js/124.b34aa8a2.js"><link rel="prefetch" href="/school/assets/js/125.ddf01853.js"><link rel="prefetch" href="/school/assets/js/126.35d0c26a.js"><link rel="prefetch" href="/school/assets/js/127.a40de122.js"><link rel="prefetch" href="/school/assets/js/128.06b91001.js"><link rel="prefetch" href="/school/assets/js/129.15b17132.js"><link rel="prefetch" href="/school/assets/js/13.98cbe429.js"><link rel="prefetch" href="/school/assets/js/130.a0f4d6e0.js"><link rel="prefetch" href="/school/assets/js/131.a717eb4e.js"><link rel="prefetch" href="/school/assets/js/132.849113fe.js"><link rel="prefetch" href="/school/assets/js/133.d18980d1.js"><link rel="prefetch" href="/school/assets/js/134.e89246fc.js"><link rel="prefetch" href="/school/assets/js/135.b2bc455d.js"><link rel="prefetch" href="/school/assets/js/136.45a588ea.js"><link rel="prefetch" href="/school/assets/js/137.0bf37a9b.js"><link rel="prefetch" href="/school/assets/js/138.f029cd36.js"><link rel="prefetch" href="/school/assets/js/139.41233bdd.js"><link rel="prefetch" href="/school/assets/js/14.74114c20.js"><link rel="prefetch" href="/school/assets/js/140.460cae24.js"><link rel="prefetch" href="/school/assets/js/141.d4271585.js"><link rel="prefetch" href="/school/assets/js/142.b589d733.js"><link rel="prefetch" href="/school/assets/js/143.608d8545.js"><link rel="prefetch" href="/school/assets/js/144.cbcac9cf.js"><link rel="prefetch" href="/school/assets/js/145.ea04f41b.js"><link rel="prefetch" href="/school/assets/js/15.a049d4ce.js"><link rel="prefetch" href="/school/assets/js/16.9b4c6ccb.js"><link rel="prefetch" href="/school/assets/js/17.340d1183.js"><link rel="prefetch" href="/school/assets/js/18.4fd81d9b.js"><link rel="prefetch" href="/school/assets/js/19.10c83c8c.js"><link rel="prefetch" href="/school/assets/js/2.22312ed6.js"><link rel="prefetch" href="/school/assets/js/20.27a9629f.js"><link rel="prefetch" href="/school/assets/js/21.00f328b8.js"><link rel="prefetch" href="/school/assets/js/22.246edaaa.js"><link rel="prefetch" href="/school/assets/js/23.569cf05b.js"><link rel="prefetch" href="/school/assets/js/24.b75ec5f9.js"><link rel="prefetch" href="/school/assets/js/25.d9c96029.js"><link rel="prefetch" href="/school/assets/js/26.d2989e35.js"><link rel="prefetch" href="/school/assets/js/27.38bd00fc.js"><link rel="prefetch" href="/school/assets/js/28.bf117d3d.js"><link rel="prefetch" href="/school/assets/js/29.aa663b5e.js"><link rel="prefetch" href="/school/assets/js/3.87a7fe20.js"><link rel="prefetch" href="/school/assets/js/30.4fa409f9.js"><link rel="prefetch" href="/school/assets/js/31.87a58a0d.js"><link rel="prefetch" href="/school/assets/js/32.b7ba24fc.js"><link rel="prefetch" href="/school/assets/js/33.37e4bea3.js"><link rel="prefetch" href="/school/assets/js/34.dcdbe51e.js"><link rel="prefetch" href="/school/assets/js/35.14aa36e0.js"><link rel="prefetch" href="/school/assets/js/36.79d04462.js"><link rel="prefetch" href="/school/assets/js/37.e4ea4dea.js"><link rel="prefetch" href="/school/assets/js/38.a85423a8.js"><link rel="prefetch" href="/school/assets/js/39.c7de24ba.js"><link rel="prefetch" href="/school/assets/js/4.595056df.js"><link rel="prefetch" href="/school/assets/js/40.7d122e75.js"><link rel="prefetch" href="/school/assets/js/41.07c5d7be.js"><link rel="prefetch" href="/school/assets/js/42.5b0ebac0.js"><link rel="prefetch" href="/school/assets/js/43.94fe92ec.js"><link rel="prefetch" href="/school/assets/js/44.4c7bfe54.js"><link rel="prefetch" href="/school/assets/js/45.e4cb3de7.js"><link rel="prefetch" href="/school/assets/js/46.bb278b4a.js"><link rel="prefetch" href="/school/assets/js/47.e76dfb98.js"><link rel="prefetch" href="/school/assets/js/48.b31f649b.js"><link rel="prefetch" href="/school/assets/js/49.e267fd5e.js"><link rel="prefetch" href="/school/assets/js/5.39a214e3.js"><link rel="prefetch" href="/school/assets/js/50.6840fcd0.js"><link rel="prefetch" href="/school/assets/js/51.5745d53f.js"><link rel="prefetch" href="/school/assets/js/52.478a6ddd.js"><link rel="prefetch" href="/school/assets/js/53.44cdfd3f.js"><link rel="prefetch" href="/school/assets/js/54.8a5af591.js"><link rel="prefetch" href="/school/assets/js/55.1a8fdf3e.js"><link rel="prefetch" href="/school/assets/js/56.ecd3e841.js"><link rel="prefetch" href="/school/assets/js/57.fe119433.js"><link rel="prefetch" href="/school/assets/js/58.e6a22b8b.js"><link rel="prefetch" href="/school/assets/js/59.84baf76a.js"><link rel="prefetch" href="/school/assets/js/6.7d46c36f.js"><link rel="prefetch" href="/school/assets/js/60.f908a13b.js"><link rel="prefetch" href="/school/assets/js/61.c7344d3f.js"><link rel="prefetch" href="/school/assets/js/62.c97bc8e3.js"><link rel="prefetch" href="/school/assets/js/63.efbe6fc7.js"><link rel="prefetch" href="/school/assets/js/64.1277d2c7.js"><link rel="prefetch" href="/school/assets/js/65.eb54ca23.js"><link rel="prefetch" href="/school/assets/js/66.0b1ba8bd.js"><link rel="prefetch" href="/school/assets/js/67.385c0c77.js"><link rel="prefetch" href="/school/assets/js/68.4c893e50.js"><link rel="prefetch" href="/school/assets/js/69.12135c2b.js"><link rel="prefetch" href="/school/assets/js/7.744731e1.js"><link rel="prefetch" href="/school/assets/js/70.71c79c5e.js"><link rel="prefetch" href="/school/assets/js/71.72a18539.js"><link rel="prefetch" href="/school/assets/js/72.95e9d83c.js"><link rel="prefetch" href="/school/assets/js/73.90341a68.js"><link rel="prefetch" href="/school/assets/js/74.7972018c.js"><link rel="prefetch" href="/school/assets/js/75.a3483662.js"><link rel="prefetch" href="/school/assets/js/76.ec272a20.js"><link rel="prefetch" href="/school/assets/js/77.63c05270.js"><link rel="prefetch" href="/school/assets/js/78.ea39a90e.js"><link rel="prefetch" href="/school/assets/js/79.bb45e240.js"><link rel="prefetch" href="/school/assets/js/8.ad4334f4.js"><link rel="prefetch" href="/school/assets/js/80.1569ceac.js"><link rel="prefetch" href="/school/assets/js/81.a98852bf.js"><link rel="prefetch" href="/school/assets/js/82.cacaf5de.js"><link rel="prefetch" href="/school/assets/js/83.880176ef.js"><link rel="prefetch" href="/school/assets/js/84.d1bc1585.js"><link rel="prefetch" href="/school/assets/js/85.cee621f6.js"><link rel="prefetch" href="/school/assets/js/86.4b65046f.js"><link rel="prefetch" href="/school/assets/js/87.ed640799.js"><link rel="prefetch" href="/school/assets/js/88.9b6032d2.js"><link rel="prefetch" href="/school/assets/js/89.43b51396.js"><link rel="prefetch" href="/school/assets/js/9.c996555b.js"><link rel="prefetch" href="/school/assets/js/90.1ea68c22.js"><link rel="prefetch" href="/school/assets/js/91.caec5965.js"><link rel="prefetch" href="/school/assets/js/92.9fadc1eb.js"><link rel="prefetch" href="/school/assets/js/93.948f712f.js"><link rel="prefetch" href="/school/assets/js/94.69a0a901.js"><link rel="prefetch" href="/school/assets/js/95.4d6b9e32.js"><link rel="prefetch" href="/school/assets/js/96.c41dfb08.js"><link rel="prefetch" href="/school/assets/js/97.5980228e.js"><link rel="prefetch" href="/school/assets/js/98.ac37f10d.js">
+    <link rel="stylesheet" href="/school/assets/css/0.styles.4be495fb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/school/" class="home-link router-link-active"><!----> <span class="site-name">School</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/school/" class="nav-link">首页</a></div><div class="nav-item"><a href="/school/website/" class="nav-link">收藏</a></div><div class="nav-item"><a href="/school/tools/" class="nav-link">工具</a></div><div class="nav-item"><a href="/school/article/" class="nav-link">文章</a></div><div class="nav-item"><a href="/school/testing/" class="nav-link">测试</a></div><div class="nav-item"><a href="/school/develop/" class="nav-link router-link-active">开发</a></div><div class="nav-item"><a href="/school/blog/" class="nav-link">博客</a></div><div class="nav-item"><a href="/school/reading/" class="nav-link">读书</a></div> <a href="https://github.com/devdiv/school" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/school/" class="nav-link">首页</a></div><div class="nav-item"><a href="/school/website/" class="nav-link">收藏</a></div><div class="nav-item"><a href="/school/tools/" class="nav-link">工具</a></div><div class="nav-item"><a href="/school/article/" class="nav-link">文章</a></div><div class="nav-item"><a href="/school/testing/" class="nav-link">测试</a></div><div class="nav-item"><a href="/school/develop/" class="nav-link router-link-active">开发</a></div><div class="nav-item"><a href="/school/blog/" class="nav-link">博客</a></div><div class="nav-item"><a href="/school/reading/" class="nav-link">读书</a></div> <a href="https://github.com/devdiv/school" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>开发</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/school/develop/" class="sidebar-link">前言</a></li><li><a href="/school/develop/Android.html" class="sidebar-link">Android</a></li><li><a href="/school/develop/csharp.html" class="sidebar-link">C Sharp</a></li><li><a href="/school/develop/css.html" class="sidebar-link">CSS</a></li><li><a href="/school/develop/django.html" class="sidebar-link">Django</a></li><li><a href="/school/develop/docker.html" class="sidebar-link">Docker</a></li><li><a href="/school/develop/go.html" class="sidebar-link">Go</a></li><li><a href="/school/develop/Java.html" class="sidebar-link">Java</a></li><li><a href="/school/develop/javascript.html" class="sidebar-link">JavaScript</a></li><li><a href="/school/develop/python.html" class="sidebar-link">Python</a></li><li><a href="/school/develop/Rails.html" class="sidebar-link">Rails</a></li><li><a href="/school/develop/ruby.html" class="sidebar-link">Ruby</a></li><li><a href="/school/develop/vue.html" class="sidebar-link">Vue</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="ruby-异常"><a href="#ruby-异常" class="header-anchor">#</a> Ruby 异常</h2> <p>异常语句 rescue/retry/raise/ensure/else/Catch/Throw</p> <p>1、rescue
+Ruby 提供了一个完美的处理异常的机制。我们可以在 begin/end 块中附上可能抛出异常的代码，并使用 <code>rescue</code> 子句告诉 Ruby 完美要处理的异常类型。</p> <div class="language-rb extra-class"><pre class="language-rb"><code><span class="token keyword">begin</span> <span class="token comment">#开始</span>
+
+ <span class="token keyword">raise</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token comment">#抛出异常</span>
+
+<span class="token keyword">rescue</span> <span class="token punctuation">[</span><span class="token constant">ExceptionType</span> <span class="token operator">=</span> <span class="token constant">StandardException</span><span class="token punctuation">]</span> <span class="token comment">#捕获指定类型的异常默认值是 StandardException</span>
+ $<span class="token operator">!</span> <span class="token comment">#表示异常信息</span>
+ $@ <span class="token comment">#表示异常出现的代码位置</span>
+<span class="token keyword">else</span> <span class="token comment">#其余异常</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">ensure</span> <span class="token comment">#不管有没有异常，进入该代码块</span>
+
+<span class="token keyword">end</span> <span class="token comment">#结束</span>
+</code></pre></div><p>从 <code>begin</code> 到 <code>rescue</code> 中的一切是受保护的。如果代码块执行期间发生了异常，控制会传到 rescue 和 end 之间的块。</p> <p>对于 <code>begin</code> 块中的每个 <code>rescue</code> 子句，Ruby 把抛出的异常与每个参数进行轮流比较。如果 <code>rescue</code> 子句中命名的异常与当前抛出的异常类型相同，或者是该异常的父类，则匹配成功。</p> <p>如果异常不匹配所有指定的错误类型，我们可以在所有的 <code>rescue</code> 子句后使用一个 <code>else</code> 子句。</p> <div class="language-rb extra-class"><pre class="language-rb"><code><span class="token comment">#!/usr/bin/ruby</span>
+
+<span class="token keyword">begin</span>
+   file <span class="token operator">=</span> open<span class="token punctuation">(</span><span class="token string">&quot;/unexistant_file&quot;</span><span class="token punctuation">)</span>
+   <span class="token keyword">if</span> file
+      puts <span class="token string">&quot;File opened successfully&quot;</span>
+   <span class="token keyword">end</span>
+<span class="token keyword">rescue</span>
+      file <span class="token operator">=</span> <span class="token constant">STDIN</span>
+<span class="token keyword">end</span>
+print file<span class="token punctuation">,</span> <span class="token string">&quot;==&quot;</span><span class="token punctuation">,</span> <span class="token constant">STDIN</span><span class="token punctuation">,</span> <span class="token string">&quot;\n&quot;</span>
+</code></pre></div><p>2、retry</p> <p>您可以使用 <code>rescue</code> 块捕获异常，然后使用 <code>retry</code> 语句从开头开始执行 <code>begin</code> 块。</p> <p>如果 <code>retry</code> 出现在 <code>begin</code> 表达式的 <code>rescue</code> 子句中，则从 begin 主体的开头重新开始。</p> <div class="language-ruby extra-class"><pre class="language-ruby"><code><span class="token keyword">begin</span>
+   do_something   <span class="token comment"># 抛出的异常</span>
+<span class="token keyword">rescue</span>
+   <span class="token comment"># 处理错误</span>
+   <span class="token keyword">retry</span>          <span class="token comment"># 重新从 begin 开始</span>
+<span class="token keyword">end</span>
+</code></pre></div><div class="language-rb extra-class"><pre class="language-rb"><code><span class="token comment">#!/usr/bin/ruby</span>
+
+<span class="token keyword">begin</span>
+   file <span class="token operator">=</span> open<span class="token punctuation">(</span><span class="token string">&quot;/unexistant_file&quot;</span><span class="token punctuation">)</span>
+   <span class="token keyword">if</span> file
+      puts <span class="token string">&quot;File opened successfully&quot;</span>
+   <span class="token keyword">end</span>
+<span class="token keyword">rescue</span>
+   fname <span class="token operator">=</span> <span class="token string">&quot;existant_file&quot;</span>
+   <span class="token keyword">retry</span>
+<span class="token keyword">end</span>
+
+<span class="token comment">=begin
+以下是处理流程：
+
+打开时发生异常。
+跳到 rescue。fname 被重新赋值。
+通过 retry 跳到 begin 的开头。
+这次文件成功打开。
+继续基本的过程。
+=end</span>
+</code></pre></div><p>如果 <code>retry</code> 出现在迭代内、块内或者 <code>for</code> 表达式的主体内，则重新开始迭代调用。</p> <div class="language-ruby extra-class"><pre class="language-ruby"><code><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token number">1.</span><span class="token number">.5</span>
+   <span class="token keyword">retry</span> <span class="token keyword">if</span> some_condition <span class="token comment"># 重新从 i == 1 开始</span>
+<span class="token keyword">end</span>
+</code></pre></div><p><strong>注</strong>：如果被重新命名的文件不存在，本实例代码会无限尝试。所以异常处理时，谨慎使用 retry。</p> <p>3、raise</p> <p>您可以使用 <code>raise</code> 语句抛出异常。下面的方法在调用时抛出异常。它的第二个消息将被输出。</p> <div class="language-rb extra-class"><pre class="language-rb"><code><span class="token comment"># 第一种形式简单地重新抛出当前异常（如果没有当前异常则抛出一个 RuntimeError）。这用在传入异常之前需要解释异常的异常处理程序中。</span>
+<span class="token keyword">raise</span>
+
+<span class="token comment"># 第二种形式创建一个新的 RuntimeError 异常，设置它的消息为给定的字符串。该异常之后抛出到调用堆栈。</span>
+
+<span class="token keyword">raise</span> <span class="token string">&quot;Error Message&quot;</span>
+
+<span class="token comment"># 第三种形式使用第一个参数创建一个异常，然后设置相关的消息为第二个参数。</span>
+
+<span class="token keyword">raise</span> <span class="token constant">ExceptionType</span><span class="token punctuation">,</span> <span class="token string">&quot;Error Message&quot;</span>
+
+<span class="token comment"># 第四种形式与第三种形式类似，您可以添加任何额外的条件语句（比如 unless）来抛出异常。</span>
+
+<span class="token keyword">raise</span> <span class="token constant">ExceptionType</span><span class="token punctuation">,</span> <span class="token string">&quot;Error Message&quot;</span> condition
+</code></pre></div><div class="language-rb extra-class"><pre class="language-rb"><code><span class="token comment">#!/usr/bin/ruby</span>
+
+<span class="token keyword">begin</span>
+    puts <span class="token string">'I am before the raise.'</span>
+    <span class="token keyword">raise</span> <span class="token string">'An error has occurred.'</span>
+    puts <span class="token string">'I am after the raise.'</span>
+<span class="token keyword">rescue</span>
+    puts <span class="token string">'I am rescued.'</span>
+<span class="token keyword">end</span>
+puts <span class="token string">'I am after the begin block.'</span>
+
+<span class="token comment">=begin 输出结果
+I am before the raise.
+I am rescued.
+I am after the begin block.
+=end</span>
+</code></pre></div><div class="language-rb extra-class"><pre class="language-rb"><code><span class="token comment">#!/usr/bin/ruby</span>
+
+<span class="token keyword">begin</span>
+  <span class="token keyword">raise</span> <span class="token string">'A test exception.'</span>
+<span class="token keyword">rescue</span> <span class="token builtin">Exception</span> <span class="token operator">=</span><span class="token operator">&gt;</span> e
+  puts e<span class="token punctuation">.</span>message
+  puts e<span class="token punctuation">.</span>backtrace<span class="token punctuation">.</span>inspect
+<span class="token keyword">end</span>
+
+<span class="token comment">=begin 输出结果
+A test exception.
+[&quot;main.rb:4&quot;]
+=end</span>
+</code></pre></div><p>4、ensure</p> <p>有时候，无论是否抛出异常，您需要保证一些处理在代码块结束时完成。例如，您可能在进入时打开了一个文件，当您退出块时，您需要确保关闭文件。</p> <p><code>ensure</code> 子句做的就是这个。<code>ensure</code> 放在最后一个 <code>rescue</code> 子句后，并包含一个块终止时总是执行的代码块。它与块是否正常退出、是否抛出并处理异常、是否因一个未捕获的异常而终止，这些都没关系，<code>ensure</code> 块始终都会运行。</p> <div class="language-rb extra-class"><pre class="language-rb"><code><span class="token keyword">begin</span>
+   <span class="token comment">#.. 过程</span>
+   <span class="token comment">#.. 抛出异常</span>
+<span class="token keyword">rescue</span>
+   <span class="token comment">#.. 处理错误</span>
+<span class="token keyword">ensure</span>
+   <span class="token comment">#.. 最后确保执行</span>
+   <span class="token comment">#.. 这总是会执行</span>
+<span class="token keyword">end</span>
+</code></pre></div><div class="language-rb extra-class"><pre class="language-rb"><code><span class="token keyword">begin</span>
+  <span class="token keyword">raise</span> <span class="token string">'A test exception.'</span>
+<span class="token keyword">rescue</span> <span class="token builtin">Exception</span> <span class="token operator">=</span><span class="token operator">&gt;</span> e
+  puts e<span class="token punctuation">.</span>message
+  puts e<span class="token punctuation">.</span>backtrace<span class="token punctuation">.</span>inspect
+<span class="token keyword">ensure</span>
+  puts <span class="token string">&quot;Ensuring execution&quot;</span>
+<span class="token keyword">end</span>
+
+<span class="token comment">=begin 输出结果
+A test exception.
+[&quot;main.rb:4&quot;]
+Ensuring execution
+=end</span>
+</code></pre></div><p>5、else</p> <p>如果提供了 else 子句，它一般是放置在 rescue 子句之后，任意 ensure 之前。</p> <p>else 子句的主体只有在代码主体没有抛出异常时执行。</p> <div class="language-rb extra-class"><pre class="language-rb"><code><span class="token keyword">begin</span>
+   <span class="token comment">#.. 过程</span>
+   <span class="token comment">#.. 抛出异常</span>
+<span class="token keyword">rescue</span>
+   <span class="token comment">#.. 处理错误</span>
+<span class="token keyword">else</span>
+   <span class="token comment">#.. 如果没有异常则执行</span>
+<span class="token keyword">ensure</span>
+   <span class="token comment">#.. 最后确保执行</span>
+   <span class="token comment">#.. 这总是会执行</span>
+<span class="token keyword">end</span>
+</code></pre></div><div class="language-rb extra-class"><pre class="language-rb"><code><span class="token keyword">begin</span>
+ <span class="token comment"># 抛出 'A test exception.'</span>
+ puts <span class="token string">&quot;I'm not raising exception&quot;</span>
+<span class="token keyword">rescue</span> <span class="token builtin">Exception</span> <span class="token operator">=</span><span class="token operator">&gt;</span> e
+  puts e<span class="token punctuation">.</span>message
+  puts e<span class="token punctuation">.</span>backtrace<span class="token punctuation">.</span>inspect
+<span class="token keyword">else</span>
+   puts <span class="token string">&quot;Congratulations-- no errors!&quot;</span>
+<span class="token keyword">ensure</span>
+  puts <span class="token string">&quot;Ensuring execution&quot;</span>
+<span class="token keyword">end</span>
+
+<span class="token comment">=begin
+以上实例运行输出结果为：
+
+I'm not raising exception
+Congratulations-- no errors!
+Ensuring execution
+=end</span>
+</code></pre></div><p>6、Catch 和 Throw</p> <p>raise 和 rescue 的异常机制能在发生错误时放弃执行，有时候需要在正常处理时跳出一些深层嵌套的结构。此时 catch 和 throw 就派上用场了。</p> <p>catch 定义了一个使用给定的名称（可以是 Symbol 或 String）作为标签的块。块会正常执行直到遇到一个 throw。</p> <div class="language-rb extra-class"><pre class="language-rb"><code><span class="token keyword">throw</span> <span class="token symbol">:lablename</span>
+<span class="token comment">#.. 这不会被执行</span>
+catch <span class="token symbol">:lablename</span> <span class="token keyword">do</span>
+<span class="token comment">#.. 在遇到一个 throw 后匹配将被执行的 catch</span>
+<span class="token keyword">end</span>
+
+或
+
+<span class="token keyword">throw</span> <span class="token symbol">:lablename</span> condition
+<span class="token comment">#.. 这不会被执行</span>
+catch <span class="token symbol">:lablename</span> <span class="token keyword">do</span>
+<span class="token comment">#.. 在遇到一个 throw 后匹配将被执行的 catch</span>
+<span class="token keyword">end</span>
+</code></pre></div><p>下面的实例中，如果用户键入 '!' 回应任何提示，使用一个 throw 终止与用户的交互。</p> <div class="language-rb extra-class"><pre class="language-rb"><code><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">promptAndGet</span></span><span class="token punctuation">(</span>prompt<span class="token punctuation">)</span>
+   print prompt
+   res <span class="token operator">=</span> readline<span class="token punctuation">.</span>chomp
+   <span class="token keyword">throw</span> <span class="token symbol">:quitRequested</span> <span class="token keyword">if</span> res <span class="token operator">==</span> <span class="token string">&quot;!&quot;</span>
+   <span class="token keyword">return</span> res
+<span class="token keyword">end</span>
+
+catch <span class="token symbol">:quitRequested</span> <span class="token keyword">do</span>
+   name <span class="token operator">=</span> promptAndGet<span class="token punctuation">(</span><span class="token string">&quot;Name: &quot;</span><span class="token punctuation">)</span>
+   age <span class="token operator">=</span> promptAndGet<span class="token punctuation">(</span><span class="token string">&quot;Age: &quot;</span><span class="token punctuation">)</span>
+   sex <span class="token operator">=</span> promptAndGet<span class="token punctuation">(</span><span class="token string">&quot;Sex: &quot;</span><span class="token punctuation">)</span>
+   <span class="token comment"># ..</span>
+   <span class="token comment"># 处理信息</span>
+<span class="token keyword">end</span>
+promptAndGet<span class="token punctuation">(</span><span class="token string">&quot;Name:&quot;</span><span class="token punctuation">)</span>
+
+<span class="token comment">=begin
+上面的程序需要人工交互，您可以在您的计算机上进行尝试。以上实例运行输出结果为：
+
+Name: Ruby on Rails
+Age: 3
+Sex: !
+Name:Just Ruby
+=end</span>
+</code></pre></div><p>7、类 Exception</p> <p>Ruby 的标准类和模块抛出异常。所有的异常类组成一个层次，包括顶部的 Exception 类在内。下一层是七种不同的类型：</p> <table><thead><tr><th>异常类型</th> <th>描述</th></tr></thead> <tbody><tr><td>Interrupt</td> <td></td></tr> <tr><td>NoMemoryError</td> <td></td></tr> <tr><td>SignalException</td> <td></td></tr> <tr><td>ScriptError</td> <td></td></tr> <tr><td>StandardError</td> <td></td></tr> <tr><td>SystemExit</td> <td></td></tr></tbody></table> <p>Fatal 是该层中另一种异常，但是 Ruby 解释器只在内部使用它。</p> <p>ScriptError 和 StandardError 都有一些子类，但是在这里我们不需要了解这些细节。最重要的事情是创建我们自己的异常类，它们必须是类 Exception 或其子代的子类。</p> <p>让我们看一个实例：</p> <div class="language-rb extra-class"><pre class="language-rb"><code><span class="token keyword">class</span> <span class="token class-name">FileSaveError</span> <span class="token operator">&lt;</span> <span class="token constant">StandardError</span>
+   attr_reader <span class="token symbol">:reason</span>
+   <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">initialize</span></span><span class="token punctuation">(</span>reason<span class="token punctuation">)</span>
+      <span class="token variable">@reason</span> <span class="token operator">=</span> reason
+   <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+</code></pre></div><p>现在，看下面的实例，将用到上面的异常：</p> <div class="language-rb extra-class"><pre class="language-rb"><code><span class="token builtin">File</span><span class="token punctuation">.</span>open<span class="token punctuation">(</span>path<span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span> <span class="token keyword">do</span> <span class="token operator">|</span>file<span class="token operator">|</span>
+    <span class="token keyword">begin</span>
+        <span class="token comment"># 写出数据 ...</span>
+    <span class="token keyword">rescue</span>
+        <span class="token comment"># 发生错误</span>
+        <span class="token keyword">raise</span> <span class="token constant">FileSaveError</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">(</span>$<span class="token operator">!</span><span class="token punctuation">)</span>
+    <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+</code></pre></div><p>在这里，最重要的一行是 raise FileSaveError.new($!)。我们调用 raise 来示意异常已经发生，把它传给 FileSaveError 的一个新的实例，由于特定的异常引起数据写入失败。</p></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/devdiv/school/edit/master/docs/develop/ruby/异常.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">5/3/2020, 9:26:56 PM</span></div></div> <!----> </div> <!----></div></div>
+    <script src="/school/assets/js/app.5919148e.js" defer></script><script src="/school/assets/js/99.b762e5e6.js" defer></script>
+  </body>
+</html>
